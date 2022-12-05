@@ -34,7 +34,7 @@
 
 - 选择S3,输入bucket名称并选择
 - Event type选择PUT
-- Suffix 输入 .zpi
+- Suffix 输入 .zip
 - 勾选 i acknoledge并点击添加
 
 ## 测试
