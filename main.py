@@ -1,3 +1,4 @@
+#codeing:utf-8
 import os
 import shutil
 import boto3
@@ -32,8 +33,9 @@ def upload_folder(s3_client, folder, bucket_name, prefix):
         if os.path.isdir(file_path):
             upload_folder(s3_client=s3_client, folder=file_path + '/', bucket_name=bucket_name, prefix=prefix)
         if os.path.isfile(file_path):
-            s3_client.upload_file(Bucket=bucket_name, Key=prefix + file_path.replace('/tmp/zip/', ''), Filename=file_path)
+            key = (prefix + file_path.replace('/tmp/zip/', '')).encode('cp437').decode('utf-8')
+            s3_client.upload_file(Bucket=bucket_name, Key=key, Filename=file_path)
             print(bucket_name)
-            print(file_path)
-            print(prefix + file_path.replace('/tmp/zip/', ''))
+            print(file_path.encode('cp437').decode('utf-8'))
+            print(key)
     return

@@ -27,7 +27,7 @@
                     "arn": "arn:aws:s3:::unzip-file"
                 },
                 "object": {
-                    "key": "ddd/apk.zip",
+                    "key": "zip/Archive.zip",
                     "size": 7382,
                     "eTag": "dc288930a14fba7d97036f675fad39d9",
                     "sequencer": "006389A8770CD18686"
