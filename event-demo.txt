@@ -27,7 +27,7 @@
                     "arn": "arn:aws:s3:::unzip-file"
                 },
                 "object": {
-                    "key": "zip/Archive.zip",
+                    "key": "cc/%E4%B8%AD%E6%96%87%E5%8E%8B%E7%BC%A9%E5%8C%85.zip",
                     "size": 7382,
                     "eTag": "dc288930a14fba7d97036f675fad39d9",
                     "sequencer": "006389A8770CD18686"

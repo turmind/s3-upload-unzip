@@ -3,13 +3,14 @@ import os
 import shutil
 import boto3
 import zipfile
+import urllib.parse
 
 def lambda_handler(event, context):
     s3_client = boto3.client('s3')
 
     for record in event['Records']:
         bucket_name = record['s3']['bucket']['name']
-        object_key = record['s3']['object']['key']
+        object_key = urllib.parse.unquote(record['s3']['object']['key'])
         if not object_key.endswith(".zip"):
             continue
         object_dir = object_key[:object_key.rfind("/") + 1]
